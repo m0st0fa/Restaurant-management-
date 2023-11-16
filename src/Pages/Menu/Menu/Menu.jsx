@@ -13,11 +13,12 @@ import MenuCategory from '../MenuCategory/MenuCategory';
 
 const Menu = () => {
     const [menu] = useMenu()
-    const offered = menu.filter(item => item.category === 'offered')
-    const dessert = menu.filter(item => item.category === 'dessert')
-    const pizza = menu.filter(item => item.category === 'pizza')
-    const salad = menu.filter(item => item.category === 'salad')
-    const soup = menu.filter(item => item.category === 'soup')
+    const desserts = menu.filter(item => item.category.toLowerCase() === 'dessert');
+    const soup = menu.filter(item => item.category.toLowerCase() === 'soup');
+    const salad = menu.filter(item => item.category.toLowerCase() === 'salad');
+    const pizza = menu.filter(item => item.category.toLowerCase() === 'pizza');
+    const offered = menu.filter(item => item.category.toLowerCase() === 'offered');
+    
 
     // dessert
     return (
@@ -29,15 +30,15 @@ const Menu = () => {
             {/* main cover  */}
               <SectionTitle subHeading={"do not miss this "} heading={"Today Offers"}> </SectionTitle>
               {/* offered menu items  */}
-              <MenuCategory items={offered}></MenuCategory>
+              <MenuCategory items={offered} title="offered"></MenuCategory>
               {/* dessert menu items */}
-              <MenuCategory items={dessert} img={dessertImg} title="Dessert"></MenuCategory>
+              <MenuCategory items={desserts} img={dessertImg} title="dessert"></MenuCategory>
               {/* pizza menu items */}
               <MenuCategory items={pizza} img={pizzaImg} title="pizza"></MenuCategory>
               {/*salad menu items */}
-              <MenuCategory items={salad} img={saladImg} title="salad cover"></MenuCategory>
+              <MenuCategory items={salad} img={saladImg} title="salad"></MenuCategory>
               {/* soup menu items   */}
-              <MenuCategory items={soup} img={shopImg} title="shop"></MenuCategory>
+              <MenuCategory items={soup} img={shopImg} title="soup"></MenuCategory>
 
 
 

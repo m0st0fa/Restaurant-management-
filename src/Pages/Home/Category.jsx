@@ -30,16 +30,16 @@ const Category = () => {
                 >
                     <SwiperSlide>
                         <img src={img1} alt="" />
-                        <h1 className='-mt-12 uppercase text-3xl text-center text-white'>Salad</h1>
+                        <h1 className='-mt-12 uppercase text-3xl text-center text-white'>salad</h1>
 
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img2} alt="" />
-                        <h1 className='-mt-12 uppercase text-3xl text-center text-white'>Soups</h1>
+                        <h1 className='-mt-12 uppercase text-3xl text-center text-white'>soup</h1>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img3} alt="" />
-                        <h1 className='-mt-12 uppercase text-3xl text-center text-white'>pizzas</h1>
+                        <h1 className='-mt-12 uppercase text-3xl text-center text-white'>pizza</h1>
 
                     </SwiperSlide>
                     <SwiperSlide>
@@ -53,7 +53,7 @@ const Category = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img5} alt="" />
-                        <h1 className='-mt-12 uppercase text-3xl text-center text-white'>desserts</h1>
+                        <h1 className='-mt-12 uppercase text-3xl text-center text-white'>dessert</h1>
                     </SwiperSlide>
                 </Swiper>
             </section>

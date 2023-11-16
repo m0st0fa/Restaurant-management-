@@ -21,7 +21,7 @@ const Features = () => {
                         <p>March 20, 2023</p>
                         <p className=" uppercase">WHERE CAN I GET SOME?</p>
                         <p>Lorem ipsum dolor sit amat consectetur adipisicing elia. Error volute facer, desert dolores maigres quod nobs quad quasi. Ease repellant recusance ad laudanum tempore consecrator consequent ornis lula maxim tenter</p>
-                        <button className="btn btn-outline ">Order Now</button>
+                        <button className="btn btn-outline">Order Now</button>
 
                     </div>
                 </div>
