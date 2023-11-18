@@ -10,8 +10,8 @@ import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 const Orders = () => {
-    const categories = ['salad','pizza','soup','dessert','drinks'];
-    const { category } = useParams()
+    const categories = ['salad', 'pizza', 'soup', 'dessert', 'drinks'];
+    const { category } = useParams() 
     const initialIndex = categories.indexOf(category)
     const [tabIndex, setTabIndex] = useState(initialIndex)
     const [menu] = useMenu()
@@ -26,7 +26,7 @@ const Orders = () => {
 
     return (
         <div>
-             <Helmet>
+            <Helmet>
                 <title>Order</title>
             </Helmet>
             <Cover img={orderIMG} title="Order Food"></Cover>

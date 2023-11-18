@@ -5,15 +5,14 @@ import { IoMenu } from "react-icons/io5";
 import { MdContactMail } from "react-icons/md";
 import { CiShop } from "react-icons/ci";
 import useCart from "../hooks/useCart";
+import useAdmin from "../Hooks/useAdmin";
 
 
 
 const DashBoard = () => {
     const [cart] = useCart()
     // TODO: GET THE ADMIN VALUE FROM THE DATABASE 
-    const isAdmin = true;
-
-
+    const [isAdmin] = useAdmin()
     return (
         <div className="flex ">
             {/* dashboard side bar */}
@@ -35,7 +34,7 @@ const DashBoard = () => {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/dashboard/mangeItems">
+                                <NavLink to="/dashboard/mangeItems">
                                         <FaList />
                                        Mange Items
                                     </NavLink>

@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { AiTwotoneDelete } from "react-icons/ai";
 import {  FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 
 const AllUsers = () => {
