@@ -2,7 +2,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
 const axiosSecure = axios.create({
-   baseURL: 'http://localhost:5001'
+   baseURL: 'https://mostofa-restaurant-server.vercel.app'
 })
 const useAxiosSecure = () => {
    const { logout } = useAuth()

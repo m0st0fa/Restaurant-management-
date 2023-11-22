@@ -14,6 +14,12 @@ import Cart from "../Pages/Dashboard/Cart/Cart";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AddItmes from "./AddItmes/AddItmes";
 import MangeItems from "../Pages/Dashboard/MangeItems/MangeItems";
+import AdminRoutes from "./AdminRoutes";
+import UpdateItems from "../Pages/Dashboard/UpdateItem/UpdateItems";
+import Payment from "../Pages/Dashboard/Paymet/Payment";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 // import AdminRoutes from "./AdminRoutes";
 
 export const router = createBrowserRouter([
@@ -54,20 +60,40 @@ export const router = createBrowserRouter([
         path: 'cart',
         element: <Cart></Cart>
       },
-
+      {
+        path: 'payment',
+        element: <Payment></Payment>
+      },
+      {
+        path:'paymentHistory',
+        element:<PaymentHistory></PaymentHistory>
+      },
+      {
+        path:'userHome',
+        element: <UserHome></UserHome>
+      },
       // admin Routes 
       {
-        path:'users',
-        element: <AllUsers></AllUsers>
+        path:'adminHome',
+        element: <AdminRoutes><AdminHome></AdminHome></AdminRoutes>
+      },
+      {
+        path: 'users',
+        element: <AdminRoutes> <AllUsers></AllUsers></AdminRoutes>
       },
       {
         path: 'addItems',
-        element:<AddItmes></AddItmes>
+        element:<AdminRoutes><AddItmes></AddItmes></AdminRoutes>
       },
       {
         path: 'mangeItems',
-        element:<MangeItems></MangeItems>
-        
+        element: <AdminRoutes><MangeItems></MangeItems></AdminRoutes>
+      },
+      {
+        path: 'updateItem/:_id',
+        element: <UpdateItems></UpdateItems>,
+        loader: ({params}) => fetch(`https://mostofa-restaurant-server.vercel.app/menu/${params._id}`)
+
       }
     ]
   }

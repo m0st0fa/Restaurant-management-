@@ -2,9 +2,9 @@
 import { FaUtensils } from "react-icons/fa";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
-import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 
 const image_hosting_key = import.meta.env.VITE_IMG_HOSTING_KEY

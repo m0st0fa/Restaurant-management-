@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+
+
+
 
 
 const FoodCard = ({ item }) => {

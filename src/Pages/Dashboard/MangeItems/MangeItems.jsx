@@ -1,14 +1,17 @@
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import useMenu from "../../../Hooks/useMenu";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useMenu from "../../../Hooks/useMenu";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 
 const ManageItems = () => {
-    const [menu, ,refetch] = useMenu();
+    const [menu, , refetch] = useMenu();
     const axiosSecure = useAxiosSecure();
+
+   
+
 
     const handleDeleteItem = (item) => {
         Swal.fire({
@@ -78,10 +81,9 @@ const ManageItems = () => {
                                     <td className="text-right">${item.price}</td>
                                     <td>
                                         <Link to={`/dashboard/updateItem/${item._id}`}>
-                                            <button
+                                            <button 
                                                 className="btn btn-ghost btn-lg bg-orange-500">
-                                                <FaEdit className="text-white 
-                                        "></FaEdit>
+                                                <FaEdit className="text-white"></FaEdit>
                                             </button>
                                         </Link>
                                     </td>
